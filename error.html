@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .error-container {
+            text-align: center;
+            padding: 40px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 80%;
+        }
+
+        h1 {
+            color: #f44336;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #90caf9;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .error-code {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #1976D2;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background-color: #1565C0;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-code">Error Code: 404</div>
+        <h1>Sorry, but the executor that you are looking for is either not released yet or patched.</h1>
+        <p>Please try again later or contact @doge_kingyt1 on Discord for more information.</p>
+        <p>Also, check out the Executor's Discord server for updates on the executor's development.</p>
+        <button class="back-button" onclick="window.location.href='/'">Go Back</button>
+    </div>
+</body>
+</html>
