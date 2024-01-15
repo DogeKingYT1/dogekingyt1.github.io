@@ -6,7 +6,7 @@
 **Updates will be here:**
 - Fixed some buttons
 - Uploaded some medias such as Images, Video, etc.
-# To-Do list
+### To-Do list
 - Make all buttons function
 - Finish up the documentation
 - Finalize Design
