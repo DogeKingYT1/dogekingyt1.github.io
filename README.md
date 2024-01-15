@@ -10,7 +10,7 @@
 - Make all buttons function
 - Finish up the documentation
 - Finalize Design
-- Your Mom
+- ~Your Mom~
 ## About this project
 `This project is to show in a .html format what roblox exploits are online.`
 
