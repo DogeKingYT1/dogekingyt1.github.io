@@ -15,7 +15,7 @@ You can also visit the Github Pages version hosted publicly at this [Github Page
 ## Forking this Repository
 You can fork this repository in linux with these commands:
 
-``git clone https://github.com/DogeKingYT1/rbxploits.site/``
+``git clone https://github.com/DogeKingYT1/rbxploits/``
 
 ``sudo service apache2 start``
 
