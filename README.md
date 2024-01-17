@@ -6,6 +6,8 @@
 **Updates will be here:**
 - Fixed some buttons
 - Uploaded some medias such as Images, Video, etc.
+- Fixed Instructions
+- Fixed File Paths
 ### To-Do list
 - Make all buttons function
 - Finish up the documentation
