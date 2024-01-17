@@ -6,6 +6,7 @@
 **Updates will be here:**
 - Fixed some buttons
 - Uploaded some medias such as Images, Video, etc.
+- Replaced header buttons on Instructions, Scripts, Games pages with error code.
 ### To-Do list
 - Make all buttons function
 - Finish up the documentation
