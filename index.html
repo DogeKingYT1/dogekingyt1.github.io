@@ -46,7 +46,8 @@
             background: #1c1c1c;
             /* border: none; */
             border-style: outset;
-            border-color: #ffffff;
+            animation: glow 2s infinite linear;
+            /* border-color: #ffffff; */
             border-radius: 5px;
             cursor: pointer;
             color: #fff;
@@ -66,7 +67,8 @@
         }
         #risk-lvl {
           background: #1c1c1c;
-          border-radius: 2%;
+          animation: glow 2s infinite linear;
+          padding: 10px;
         }
         .electronimg {
           width: 500px;
@@ -121,11 +123,21 @@
           height: 80px;
           border-radius: 50%;
           border-style: outset;
-          border-color: #00ff00;
+          animation: glow 2s infinite linear;
           margin: 0 auto;
           margin-bottom: 10px;
           object-fit: cover;
         }
+
+        @keyframes glow {
+          0%, 100% {
+            box-shadow: 0 0 10px 3px rgb(255, 0, 0); /* Red */
+          }
+          50% {
+            box-shadow: 0 0 10px 3px rgb(0, 255, 0); /* Green */
+          }
+        }
+
     </style>
 </head>
 <body>
@@ -180,12 +192,12 @@
     <div class="exploit-info">
       <img class="exploit-icon" src="imgs/olympia.png">
       <p><b>Exploit Title</b></p>
-      <p><b>Status: <i class="status1">Example</i></b></p>
-      <p><b>Level: Example</b></p>
+      <p><b>Status: <i class="status3">Testing</i></b></p>
+      <p><b>Level: 2</b></p>
       <h3 class="desc-title">Exploit Description</h3>
-      <p><b class="desc-text">Exploit Description Goes here</b></p>
-      <button class="button" onclick="window.href.location='error.html'">Download</button>
-      <button class="button" onclick="window.href.location='error.html'">Join Template Discord</button>
+      <p><b class="desc-text">Olympia is a Python Tool Executor which manipulates tools similarly to NetflixCE, NetflEXT (Netflix Python), etc.</b></p>
+      <button class="button" onclick="window.href.location='https://cdn.discordapp.com/attachments/1193722078248050688/1200671963316768788/Olympia_V7.0.1.zip?ex=65c707e7&is=65b492e7&hm=3b36fe306d4e08bf7cc702ae410496474ef543c855dfe2d8801c13a688cb04a3&'">Download</button>
+      <button class="button" onclick="window.href.location='https://discord.gg/olympiaexec'">Join Olympia Discord</button>
     </div>
   </div>
 </body>
