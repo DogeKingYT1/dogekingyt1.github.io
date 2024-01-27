@@ -66,7 +66,7 @@
         }
         #risk-lvl {
           background: #1c1c1c;
-          border-radius: 30%;
+          border-radius: 2%;
         }
         .electronimg {
           width: 500px;
@@ -99,9 +99,19 @@
           text-align: center;
           text-decoration-color: green;
         }
-        .exploit-description {
-          background-color: #212121;
-          border-radius: 20%;
+        .exploit-info {
+          background: #161616;
+          color: #ffffff;
+          width: 30%;
+          height: 40%;
+          padding: 15px;
+          border-radius: 20px;
+          border-style: outset;
+          margin: 0 auto; /* Center horizontally */
+          margin-top: 20px; /* Add margin from the top */
+        }
+        .exploit-title {
+
         }
     </style>
 </head>
@@ -153,8 +163,13 @@
     <b><p>Template Name</p></b>
     <p><b>Status: <i class="status1"></i>Example</b></p>
     <p><b>Level: Unknown</b></p>
-    <div class="exploit-description">
-      <h3 class="desc-title">Description</h3>
+
+    <div class="exploit-info">
+      <img class="exploit-icon" src="olympia.png">
+      <p><b>Exploit Title</b></p>
+      <p><b>Status: <i class="status1">Example</i></b></p>
+      <p><b>Level: Example</b></p>
+      <h3 class="desc-title">Exploit Description</h3>
       <p><b class="desc-text">Exploit Description Goes here</b></p>
     </div>
     <button class="button" onclick="window.href.location='error.html'">Download</button>
