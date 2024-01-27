@@ -46,7 +46,7 @@
             background: #1c1c1c;
             /* border: none; */
             border-style: outset;
-            animation: glow 2s infinite linear;
+            animation: rgb 2s infinite linear;
             border-color: #ffffff;
             border-radius: 5px;
             cursor: pointer;
@@ -67,7 +67,7 @@
         }
         #risk-lvl {
           background: #1c1c1c;
-          animation: glow 2s infinite linear;
+          animation: rgb 2s infinite linear;
           padding: 10px;
         }
         .electronimg {
@@ -107,7 +107,7 @@
           width: 30%;
           height: 40%;
           padding: 15px;
-          animation: glow 2s infinite linear;
+          animation: rgb 2s infinite linear;
           border-radius: 20px;
           border-style: outset;
           margin: 0 auto; /* Center horizontally */
@@ -124,26 +124,20 @@
           height: 80px;
           border-radius: 50%;
           border-style: outset;
-          animation: glow 2s infinite linear;
+          animation: rgb 2s infinite linear;
           margin: 0 auto;
           margin-bottom: 10px;
           object-fit: cover;
         }
 
-        @keyframes glow {
+        @keyframes rgb {
           0%, 100% {
+            border-color: 0 0 10px 3px rgb(255, 0, 0); /* Red */
             box-shadow: 0 0 10px 3px rgb(255, 0, 0); /* Red */
           }
           50% {
-            box-shadow: 0 0 10px 3px rgb(0, 255, 0); /* Green */
-          }
-        }
-        @keyframes border {
-          0%, 100% {
-            border-color: 0 0 10px 3px rgb(255, 0, 0); /* Red */
-          }
-          50% {
             border-color: 0 0 10px 3px rgb(0, 255, 0); /* Green */
+            box-shadow: 0 0 10px 3px rgb(0, 255, 0); /* Green */
           }
         }
     </style>
