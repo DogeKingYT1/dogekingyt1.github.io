@@ -47,7 +47,7 @@
             /* border: none; */
             border-style: outset;
             animation: glow 2s infinite linear;
-            /* border-color: #ffffff; */
+            border-color: #ffffff;
             border-radius: 5px;
             cursor: pointer;
             color: #fff;
@@ -107,6 +107,7 @@
           width: 30%;
           height: 40%;
           padding: 15px;
+          animation: glow 2s infinite linear;
           border-radius: 20px;
           border-style: outset;
           margin: 0 auto; /* Center horizontally */
@@ -137,7 +138,14 @@
             box-shadow: 0 0 10px 3px rgb(0, 255, 0); /* Green */
           }
         }
-
+        @keyframes border {
+          0%, 100% {
+            border-color: 0 0 10px 3px rgb(255, 0, 0); /* Red */
+          }
+          50% {
+            border-color: 0 0 10px 3px rgb(0, 255, 0); /* Green */
+          }
+        }
     </style>
 </head>
 <body>
