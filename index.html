@@ -47,7 +47,7 @@
             /* border: none; */
             border-style: outset;
             animation: rgb 2s infinite linear;
-            border-color: #ffffff;
+            border-color: #C0C0C0;
             border-radius: 5px;
             cursor: pointer;
             color: #fff;
@@ -67,14 +67,13 @@
         }
         #risk-lvl {
           background: #1c1c1c;
+          border-style: outset;
+          border-color: #C0C0C0;
           animation: rgb 2s infinite linear;
-          padding: 10px;
+          padding: 15px;
+          margin: 5px;
         }
-        .electronimg {
-          width: 500px;
-          height: 400px;
-        }
-        .electronvid {
+        .video {
           width: 600px;
           height: 400px;
         }
@@ -132,11 +131,9 @@
 
         @keyframes rgb {
           0%, 100% {
-            border-color: 0 0 10px 3px rgb(255, 0, 0); /* Red */
             box-shadow: 0 0 10px 3px rgb(255, 0, 0); /* Red */
           }
           50% {
-            border-color: 0 0 10px 3px rgb(0, 255, 0); /* Green */
             box-shadow: 0 0 10px 3px rgb(0, 255, 0); /* Green */
           }
         }
