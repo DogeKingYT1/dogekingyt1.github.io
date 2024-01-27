@@ -13,6 +13,7 @@
         #header {
             background-color: #111;
             padding: 10px;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -136,7 +137,11 @@
         }
 
         .site-logo {
-
+          width: 150px; /* Width of the logo */
+          height: auto; /* Ensures the logo maintains its aspect ratio */
+          display: block; /* Makes sure the logo behaves as a block element */
+          margin: 0; /* Resets any default margin */
+          border-radius: 10px; /* Adds rounding to the logo */
         }
     </style>
 </head>
