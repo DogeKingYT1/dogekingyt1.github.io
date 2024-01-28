@@ -4,19 +4,22 @@
 
 ## Updates (Update Log)
 **Updates will be here:**
-- Fixed some buttons
-- Uploaded some medias such as Images, Video, etc.
-- Replaced header buttons on Instructions, Scripts, Games pages with error code.
+**1/28/2024**
+- Added new Instructions
+- Added new Exploits
+- Added new Website Design
+- Added new Teleporter Game
+- Removed all non-working exploits
 ### To-Do list
 - Make all buttons function
 - Finish up the documentation
-- Finalize Design
+- ~Finalize Design~
 - ~Your Mom~
 ## About this project
 `This project is to show in a .html format what roblox exploits are online.`
 
 ## Visiting Github Pages Version
-You can also visit the Github Pages version hosted publicly at this [Github Pages](https://example.com/) link.
+You can also visit the Github Pages version hosted publicly at this [Github Pages](https://dogekingyt1.github.io/rbxploits) link.
 
 ## Forking this Repository
 You can fork this repository in linux with these commands:
