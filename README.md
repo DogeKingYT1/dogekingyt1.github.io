@@ -4,15 +4,13 @@
 
 ## Updates (Update Log)
 **Updates will be here:**
-**1/28/2024**
-- Added new Instructions
-- Added new Exploits
-- Added new Website Design
-- Added new Teleporter Game
-- Removed all non-working exploits
+**2/2/2024**
+- Updated Exploit Statuses
+- Added new Exploit "Vulkan"
 ### To-Do list
-- Make all buttons function
-- Finish up the documentation
+**2/2/2024**
+- Create Community Discord
+- ~Make all buttons function~
 - ~Finalize Design~
 - ~Your Mom~
 ## About this project
