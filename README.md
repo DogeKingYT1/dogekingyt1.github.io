@@ -4,15 +4,14 @@
 
 ## Updates (Update Log)
 **Updates will be here:**
-**2/2/2024**
+**2/20/2024**
 - Updated Exploit Statuses
-- Added new Exploit "Vulkan"
+- Added Safety Warning
+- Added Script Sites on Scripts page
 ### To-Do list
-**2/2/2024**
+**2/20/2024**
 - Create Community Discord
-- ~Make all buttons function~
-- ~Finalize Design~
-- ~Your Mom~
+
 ## About this project
 `This project is to show in a .html format what roblox exploits are online.`
 
