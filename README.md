@@ -4,10 +4,9 @@
 
 ## Updates (Update Log)
 **Updates will be here:**
-**2/20/2024**
-- Updated Exploit Statuses
-- Added Safety Warning
-- Added Script Sites on Scripts page
+**3/18/24**
+- Added Embed
+- Added new executor (Blindness)
 ### To-Do list
 **2/20/2024**
 - Create Community Discord
@@ -25,4 +24,4 @@ You can fork this repository in linux with these commands:
 
 ``sudo service apache2 start``
 
-``httos://127.0.0.1/``
+``https://127.0.0.1/`` or ``http://localhost``
