@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="twitter:title" content="Roblox Exploits | Download Blindness V2">
+<meta name="twitter:description" content="Download Blindness V2 (CE) here, Working as of 4/13/24.">
+<meta name="twitter:image" content="https://dogekingyt1.github.io/rbxploits/imgs/blindness.png">
+<link rel="icon" src="/rbxploits/imgs/icon.jpg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Downloading Blindness V2</title>
+<style>
+    body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding-top: 50px;
+    }
+    h1 {
+        color: #ddd;
+    }
+    .download-progress {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+</style>
+<script>
+    // Function to initiate download and redirect
+    function downloadAndRedirect() {
+        // URL of the file to download
+        var downloadUrl = 'chaos-pyleak.zip';
+        // Create a temporary anchor element
+        var tempAnchor = document.createElement('a');
+        // Set the href attribute to the download URL
+        tempAnchor.href = downloadUrl;
+        // Set the download attribute to force download
+        tempAnchor.download = 'chaos-pyleak.zip';
+        // Append the anchor to the body
+        document.body.appendChild(tempAnchor);
+        // Click the anchor to initiate download
+        tempAnchor.click();
+        // After a delay of 30 seconds, redirect to '/example'
+        setTimeout(function() {
+            window.location.href = '/rbxploits';
+        }, 30000); // 30000 milliseconds = 30 seconds
+    }
+</script>
+</head>
+<body onload="downloadAndRedirect()">
+    <h1>Downloading ChaosPy Source Code...</h1>
+    <div class="download-progress">Please wait, your download will begin shortly.</div>
+</body>
+</html>
