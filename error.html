@@ -2,78 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="twitter:title" content="Roblox Exploits | Error 404">
+    <meta name="twitter:description" content="If you're seeing this link, It means that the link you tried to access is not available.">
+    <meta name="twitter:image" content="https://dogekingyt1.github.io/rbxploits/imgs/icon.jpg">
+    <link rel="icon" href="imgs/icon.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error Page</title>
+    <title>Error 404 - Page Not Found</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #222;
+            background-color: #121212;
+            background-image: url("imgs/exploit-gameplay.jpg");
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 50px;
             margin: 0;
-            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
         }
-
         .error-container {
-            text-align: center;
-            padding: 40px;
-            background-color: #333;
-            color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            max-width: 80%;
+            max-width: 600px;
+            padding: 50px;
+            border-radius: 10px;
+            background-color: #1f1f1f;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
         }
-
         h1 {
-            color: #f44336;
+            font-size: 3rem;
             margin-bottom: 20px;
         }
-
         p {
-            color: #ccc;
-            line-height: 1.6;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
         }
-
-        a {
-            color: #90caf9;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .error-code {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
         .back-button {
             display: inline-block;
+            background-color: #000000;
+            color: #ffffff;
             padding: 10px 20px;
-            margin-top: 20px;
-            background-color: #1976D2;
-            color: #fff;
-            text-decoration: none;
+            font-size: 1.2rem;
+            border: none;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
             cursor: pointer;
+            transition: transform 0.3s ease-in-out, background-color 0.3s; /* Apply transition with ease-in-out */
         }
-
         .back-button:hover {
-            background-color: #1565C0;
+            background-color: #2b2b2b;
+            transform: scale(1.05); /* Scale the button by 5% */
+        }
+        .site-logo {
+          width: 150px;
+          height: auto;
+          display: block;
+          margin: 0 auto;
+          border-radius: 50%;
+          border-style: outset;
+          border-color: #3c3c3c;
+          object-fit: cover;
         }
     </style>
 </head>
 <body>
     <div class="error-container">
-        <div class="error-code">Error Code: 404</div>
-        <h1>Sorry, we could not reach the page you are looking for.</h1>
-        <p>Please try again later or contact @doge_kingyt1 on Discord for more information.</p>
-        <button class="back-button" onclick="window.location.href='/rbxploits'">Go Back</button>
+        <img class="site-logo" src="imgs/icon.jpg">
+        <h1>Error 404</h1>
+        <p>Whoops! Looks like the page you are looking for can't be found right now.</p>
+        <button class="back-button" onclick="window.location.href = '/rbxploits';">Go Back</button>
     </div>
 </body>
 </html>
