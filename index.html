@@ -291,6 +291,21 @@
     </style>
 </head>
 <body>
+  <script>
+        function scrollToAnchor() {
+            const hash = window.location.hash;
+            if (hash) {
+                const targetId = hash.substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        }
+
+        // Call the function when the page is loaded
+        window.addEventListener('load', scrollToAnchor);
+    </script>
     <script src="prism/prism-dark.js"></script>
     <div id="header">
         <!--<i class="fa-solid fa-share"></i>-->
@@ -341,7 +356,7 @@
     
     <h2><i class="fa-solid fa-newspaper" style="font-size: 30px; margin-right: 15px;"></i>Media / News</h2>
     <p>Latest Roblox Exploiting News</p>
-    <div class="news">
+    <div class="news" id="news">
 
       <p><b>Wave Malware & Detection (UPDATE)</b></p>
       <p>So, Update on the Wave Situation; Wave is Detected but is not a Virus. After going through each file. No malicious behaviour was found. But that doesn't mean in future updates that they might add some sort of malware.</p>
@@ -360,7 +375,7 @@
       -->
     </div>
 
-    <h2><i class="fa-brands fa-windows"></i>Externals</h2>
+    <h2><i class="fa-brands fa-windows" id="externals"></i>Externals</h2>
     <!-- <p><b>Sorry, No externals.</b></p> -->
     <div class="exploit-info">
       <img class="exploit-icon" src="imgs/carbon.png">
@@ -417,7 +432,7 @@
       <button class="button" onclick="window.open('https://writedata.sellsn.io/')"><i class="fa-solid fa-cart-shopping"></i>Buy</button>
       <button class="button" onclick="window.open('https://discord.gg/solarised')"><i class="fa-brands fa-discord"></i>Discord</button>
     </div>
-    <h2><i class="fa-brands fa-windows"></i>Internals</h2>
+    <h2><i class="fa-brands fa-windows" id="internals"></i>Internals</h2>
     <div class="exploit-info">
       <img class="exploit-icon" src="imgs/chaos.png">
       <p><b>Chaos</b></p>
@@ -452,7 +467,7 @@
       <button class="button" onclick="window.open('error.html')"><i class="fa-brands fa-discord"></i>Discord</button>
     </div>
 
-    <h2><i class="fa-brands fa-windows"></i>Soft-Aims / AI Aimbot</h2>
+    <h2><i class="fa-brands fa-windows" id="ai-aimming"></i>Soft-Aims / AI Aimbot</h2>
 
     <div class="exploit-info">
       <img class="exploit-icon" src="imgs/nezur.png">
@@ -476,11 +491,11 @@
       <button class="button" onclick="window.open('https://discord.gg/babyhamsta')"><i class="fa-brands fa-discord"></i>Discord</button>
     </div>
 
-    <h2><i class="fa-brands fa-android"></i>Android</h2>
+    <h2><i class="fa-brands fa-android" id="android"></i>Android</h2>
 
     <p><b>Sorry, No Android Executors to Suggest.</b></p>
 
-    <h2>Server-Sides</h2>
+    <h2 id="serversides">Server-Sides</h2>
     <p><b>No serversides yet, Sorry.</b></p>
   </div>
   
