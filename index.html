@@ -16,13 +16,7 @@
     <link rel="icon" href="imgs/icon.jpg">
     <link rel="stylesheet" href="prism/prism-dark.css">
     <script src="https://kit.fontawesome.com/3a0d98dcec.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
-    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const player = new Plyr('.videoplayer');
-      });
-    </script>
+    
     <style>
         body {
             background-color: #333;
@@ -120,6 +114,8 @@
           display: block;
           width: 110px;
           height: 110px;
+          border-style: outset;
+          border-color: #4c4c4c;
           border-radius: 50%;
           margin: 0 auto;
           margin-bottom: 10px;
@@ -299,6 +295,7 @@
           border-radius: 5px; /* Example border radius */
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Example box shadow */
         }
+        
     </style>
 </head>
 <body>
@@ -317,6 +314,30 @@
         // Call the function when the page is loaded
         window.addEventListener('load', scrollToAnchor);
     </script>
+    <script>
+        // Define a function to copy the link
+        function copyLink() {
+            var link = window.location.href;
+            
+            // Create a temporary input element
+            var tempInput = document.createElement('input');
+            tempInput.value = link;
+            document.body.appendChild(tempInput);
+            
+            // Select the input field's content
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999); // For mobile devices
+            
+            // Copy the selected content
+            document.execCommand('copy');
+            
+            // Remove the temporary input
+            document.body.removeChild(tempInput);
+            
+            // Optionally, give feedback to the user
+            alert('\n Link copied to clipboard: ' + link + '! \n Share with your friends!');
+        }
+    </script>
     <script src="prism/prism-dark.js"></script>
     <div id="header">
         <!--<i class="fa-solid fa-share"></i>-->
@@ -325,20 +346,23 @@
             <img class="site-logo" src="imgs/icon.jpg">
             <h2 class="site-title">Roblox Exploits</h2>
             <p class="site-desc"><b><i>Make Exploiting Great Again | Roblox Exploits ~ 2020</i></b></p>
+            <p style="position: absolute; top: 0; left: 20px;">Last Update: 5/12/24</p>
+            <button onclick="copyLink()" style="position: absolute; top: 55px; left: 20px; font-size: 18px; padding: 10px 10px; background: #1c1c1c; border-style: outset; animation: rgb 2s infinite linear; border-color: #C0C0C0; border-radius: 20px; cursor: pointer; color: #fff;"><i class="fa-solid fa-share"></i>Share</button>
+            
         </div>
         <div id="header-buttons">
-            <button class="button header-button"><i class="fa-solid fa-house"></i>Home</button>
+          <button class="button header-button"><i class="fa-solid fa-house"></i>Home</button>
           <button class="button header-button" onclick="window.location.href='instructions'"><i class="fa-solid fa-gear"></i>Instructions</button>
           <button class="button header-button" onclick="window.location.href='scripts'"><i class="fa-solid fa-scroll fa-flip-horizontal"></i>Scripts</button>
           <button class="button header-button" onclick="window.location.href='games'"><i class="fa-solid fa-gamepad"></i>TP Games</button>
         </div>
-        <!--<div class="info">
+        <div class="info">
           <img class="mugshot" src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-EC85E9995F7EDF3B7652464ACE0D61E6-Png/150/150/AvatarHeadshot/Png/noFilter">
           <p class="username">Announcement from: IHateRBLXMod3r4i0n (Doge_KingYT1)</p>
         </div>
         <div class="alert">
-          <p><i class="fa-solid fa-triangle-exclamation"></i>Announcement: A new executor by the name of wave has been getting alot of alligations, such as being a 'Honeypot', 'Virus', or being detected. Careful running this exploit. (4/11/24)<i class="fa-solid fa-triangle-exclamation"></i></p>
-        </div> -->
+          <p><i class="fa-solid fa-triangle-exclamation"></i>Announcement: I'm kinda gonna put this project on the backburner since it's kinda dead right now. I'll return to this project somepoint when it gets back up again; But right now roblox has been trying to kill off all the working exploits. Like the <code>zdisablememorytrackingtestcomparison</code> or <code>zflag</code> channel roblox tried to force on detected users & destroy all the Exploiting community has built. Roblox has realised exploits are making a comeback even with their shitty anti-cheat. Roblox is shitting their pants. Any detected exploit (Krampus, Solara, Lunar, Incognito, etc.) check your accounts.  So, TLDR; This isn't goodbye, it's just dying down again so I don't really have a purpose or anything to update this with. <i class="fa-solid fa-triangle-exclamation"></i></p>
+        </div>
     </div>
   <div id="content">
 
@@ -349,7 +373,8 @@
       <p><b class="status2">Work in Progress / Not released yet</b></p>
       <p><b class="status1">Working as of Latest ROBLOX Update</b></p>
     </div>
-    <iframe src="IAT/" style="height:400px; width:350px; margin-top: 20px; border-radius: 25px; border-style: outset; border-color: #C0C0C0;"></iframe>
+    <!--<iframe src="IAT/" style="height:400px; width:350px; margin-top: 20px; border-radius: 25px; border-style: outset; border-color: #C0C0C0;"></iframe> -->
+    
     <!--
     <div class="exploit-info">
       <img class="exploit-icon" src="imgs/example.png">
@@ -368,23 +393,25 @@
     <h2><i class="fa-solid fa-newspaper" style="font-size: 30px; margin-right: 15px;"></i>Media / News</h2>
     <p>Latest Roblox Exploiting News</p>
     <div class="news" id="news">
-      <p><b>Kiwi X Malware</b></p>
-      <p>A redditor on r/robloxhackers posted <a href="https://www.reddit.com/r/robloxhackers/comments/1cdmkqn/kiwix_is_malware_a_short_dig/">this</a> thread with proof that Kiwi X is malicious.</p>
       
-      <p><b>Lunar Executor</b></p>
-      <p>There's a new executor named "Lunar", They've posted this screenshot of a demo of their executor. Looks pretty good! I thought it was a rebrand of chaos, but no. Just a new executor which is supposedly gonna be TPless.</p>
-      <img src="imgs/lunar-screenshot.png" style="border-style: outset; border-radius: 10px;">
+      <p><b>Krampus Memory Leak | Roblox Banwave</b></p>
+      <p>So, Supposedly Krampus had a memory leak with their Websockets & such so roblox/hyperion detected injections since 4/11/24 and supposedly was fixed on 4/24/24. But people are getting banned as of 5/8/24 & onward.</p>
+      
+      <p><b>Valkyrie Executor</b></p>
+      <p>Seen <a href="https://www.reddit.com/r/robloxhackers/comments/1cnvjew/valkyrie_executor_new_functions_a_lot_more/">this</a> post on r/robloxhackers & thought it was worth talking about; "ValyseOfficial" posted a thread on Reddit about their executor with a 73% UNC so far. The UI doesn't look half bad so I'm excited to see this. </p>
 
-      <p><b>Wave Malware & Detection (UPDATE)</b></p>
-      <p>So, Update on the Wave Situation; Wave is Detected but is not a Virus. After going through each file. No malicious behaviour was found. But that doesn't mean in future updates that they might add some sort of malware.</p>
+      <p><b>Paid VS Free | Meme</b></p>
+      <p>Source: <a href="https://www.reddit.com/r/robloxhackers/comments/1co6yrj/fax/">Reddit Thread</a></p>
+      <video src="https://packaged-media.redd.it/ffly2at6mgzc1/pb/m2-res_1080p.mp4?m=DASHPlaylist.mpd&v=1&e=1715349600&s=189fd25b4082240411b001ffbdec020c361988f6#t=0" class="videoplayer" controls;></video>
+
+      <p><b>POV: Roblox realising Exploits are making a comeback | Meme</b></p>
+      <p>Source: <a href="https://www.reddit.com/r/robloxhackers/comments/1cnzb9l/pov_roblox_realizing_exploits_are_making_a/">Reddit Thread</a></p>
+      <video src="https://www.reddit.com/r/robloxhackers/comments/1co6yrj/fax/" class="videoplayer" controls;></video>
 
       <p><b>Valyse for PC coming soon?</b></p>
-      <p>Valse is supposedly developing a PC exploit and releasing soon? I found this <a href="https://www.reddit.com/r/robloxhackers/comments/1boyuwn/valyse_for_pc_comming_soon/">thread</a> on reddit (r/robloxhackers).</p>
+      <p>Valyse is supposedly developing a PC exploit and releasing soon? I found this <a href="https://www.reddit.com/r/robloxhackers/comments/1boyuwn/valyse_for_pc_comming_soon/">thread</a> on reddit (r/robloxhackers).</p>
       <video src="media/valysepc.mp4" class="videoplayer" controls;></video>
       
-      <p><b>Wave Malware & Detection</b></p>
-      <p>Supposedly, Wave is a RAT & also detected. I don't believe it personally until someone screenshares me live the proof that it's a virus. Also apparently reputable source "gogo1000" says it's detected/flagged so a banwave is due?</p>
-      <p>Here's the <a href="https://v3rm.net/threads/warning-wave-is-detected-actual-proof.6322/">Verm</a> thread.</p>
       <!--<p>No news to report.</p>
       <iframe id="youtube" width="390" height="400" src="https://www.youtube.com/embed/UOJwVXfISiw" title="Roblox Tool Less Exploit Byfron Bypass &quot;VULKAN&quot; - Working UWP &amp; WEB Version February 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       <iframe width="700" height="500" src="https://www.youtube.com/embed/4GDVJw8wSfw" title="The NEW Roblox Exploit For Windows IS OUT! | No Emulator Ro-Exec | Krampus Roblox Exploit Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -396,13 +423,25 @@
     <!-- <p><b>Sorry, No externals.</b></p> -->
     
     <div class="exploit-info" id="carbonexec">
-      <img class="exploit-icon" src="imgs/solara.png">
-      <p><b>Solara</b></p>
-      <p><b>Version: Unknown</b></p>
+      <img class="exploit-icon" src="imgs/icon.jpg">
+      <p><b>Valkyrie</b></p>
+      <p><b>Version: Web & UWP</b></p>
       <p><b>Status: <i class="status2">Unreleased</i></b></p>
       <p><b>Level: Unknown</b></p>
       <h3 class="desc-title">Exploit Description:</h3>
-      <p><b class="desc-text">Unknown Description.</b></p>
+      <p><b class="desc-text">Valkerie is an executor with I think a reputable reputation, But the UI looks nice! I think they were an executor post-byfron. So this should be interesting. "Roblox: 73% UNC & Roblox Studio: 76%".</b></p>
+      <button class="button" onclick="window.open('https://valkyrieofficial.vercel.app')"><i class="fa-solid fa-download"></i>Download</button>
+      <button class="button" onclick="window.open('https://discord.gg/pJkAVBGnVn')"><i class="fa-brands fa-discord"></i>Discord</button>
+    </div>
+
+    <div class="exploit-info" id="carbonexec">
+      <img class="exploit-icon" src="imgs/solara.png">
+      <p><b>Solara</b></p>
+      <p><b>Version: Unknown</b></p>
+      <p><b>Status: <i class="status3">Detected</i></b></p>
+      <p><b>Level: Unknown</b></p>
+      <h3 class="desc-title">Exploit Description:</h3>
+      <p><b class="desc-text">Solara is owned by quiving, very detectable or detected exploit; Wouldn't recommend using w/o a VPN & HWID spoofer.</b></p>
       <button class="button" onclick="window.open('error.html')"><i class="fa-solid fa-download"></i>Download</button>
       <button class="button" onclick="window.open('https://discord.gg/9scrqjJ2Ra')"><i class="fa-brands fa-discord"></i>Discord</button>
     </div>
@@ -411,7 +450,7 @@
       <img class="exploit-icon" src="imgs/lunar.png">
       <p><b>Lunar</b></p>
       <p><b>Version: Unknown</b></p>
-      <p><b>Status: <i class="status2">Unreleased</i></b></p>
+      <p><b>Status: <i class="status3">Detected</i></b></p>
       <p><b>Level: Unknown</b></p>
       <h3 class="desc-title">Exploit Description:</h3>
       <p><b class="desc-text">Lunar is a executor made by Sivy & Savage which offers to have HttpGet, Filesystem, TPless, Fast Injection & No Crashes.</b></p>
@@ -423,10 +462,10 @@
       <img class="exploit-icon" src="imgs/incognitoexec.png">
       <p><b>Incognito</b></p>
       <p><b>Version: Unknown</b></p>
-      <p><b>Status: <i class="status2">Unreleased</i></b></p>
+      <p><b>Status: <i class="status3">Detected</i></b></p>
       <p><b>Level: 3</b></p>
       <h3 class="desc-title">Exploit Description</h3>
-      <p><b class="desc-text">Unknown Description.</b></p>
+      <p><b class="desc-text">Exploit owned by jiln0n & piomanly is a free exploit which is either C++ or Python, Most likely C++ so that's nice I don't know much about this exploit or it's developers but yea.</b></p>
       <button class="button" onclick="window.open('error.html')"><i class="fa-solid fa-download"></i>Download</button>
       <button class="button" onclick="window.open('https://discord.gg/incognitopy')"><i class="fa-brands fa-discord"></i>Discord</button>
     </div>
@@ -442,17 +481,19 @@
       <button class="button" onclick="window.open('error.html')"><i class="fa-solid fa-download"></i>Download</button>
       <button class="button" onclick="window.open('https://discord.gg/9scrqjJ2Ra')"><i class="fa-brands fa-discord"></i>Discord</button>
     </div>
+
     <div class="exploit-info" id="wave">
       <img class="exploit-icon" src="imgs/wave.gif">
       <p><b>Wave Executor</b></p>
       <p><b>Version: Web</b></p>
-      <p><b>Status: <i class="status3">Detected & Patched</i></b></p>
+      <p><b>Status: <i class="status2">Unreleased Update</i></b></p>
       <p><b>Level: 5</b></p>
       <h3 class="desc-title">Exploit Description:</h3>
       <p><b class="desc-text">So, Wave is a partner or biproduct of Arceus but they've been getting alot of names thrown at them saying it's a virus and it's detected. Which granted it is detected or detectable but no video evidence of it being a virus.</b></p>
       <button class="button" onclick="window.open('error.html')"><i class="fa-solid fa-download"></i>Download</button>
       <button class="button" onclick="window.open('https://discord.gg/getwave')"><i class="fa-brands fa-discord"></i>Discord</button>
     </div>
+
     <div class="exploit-info" id="arceuswindows">
       <img class="exploit-icon" src="imgs/arceusx.gif">
       <p><b>Arceus X Windows</b></p>
@@ -464,17 +505,19 @@
       <button class="button" onclick="window.open('error.html')"><i class="fa-solid fa-download"></i>Download</button>
       <button class="button" onclick="window.open('https://discord.gg/arceus')"><i class="fa-brands fa-discord"></i>Discord</button>
     </div>
+
     <div class="exploit-info" id="krampus">
       <img class="exploit-icon" src="imgs/krampus.png">
       <p><b>Krampus</b></p>
       <p><b>Version: Web & UWP</b></p>
-      <p><b>Status: <i class="status2">Unknown</i></b></p>
+      <p><b>Status: <i class="status3">Detected</i></b></p>
       <p><b>Level: 8-9</b></p>
       <h3 class="desc-title">Exploit Description:</h3>
       <p><b class="desc-text">A new byfron bypass that recently came out. The first real External to Release Since C++ libraries are tagged and soon all Python & CE methods. This recently came out. It can do loadstring and all that so yea, buy at your own risk I guess.</b></p>
       <button class="button" onclick="window.open('error.html')"><i class="fa-solid fa-cart-shopping"></i>Buy</button>
       <button class="button" onclick="window.open('error.html')"><i class="fa-brands fa-discord"></i>Discord</button>
     </div>
+
     <div class="exploit-info" id="solarised">
       <img class="exploit-icon" src="imgs/solaris.png">
       <p><b>Solaris / Solarised</b></p>
@@ -486,6 +529,7 @@
       <button class="button" onclick="window.open('https://writedata.sellsn.io/')"><i class="fa-solid fa-cart-shopping"></i>Buy</button>
       <button class="button" onclick="window.open('https://discord.gg/solarised')"><i class="fa-brands fa-discord"></i>Discord</button>
     </div>
+
     <h2><i class="fa-brands fa-windows" id="internals"></i>Internals</h2>
     
     <p><b>Sorry, No internal executors for now.</b></p>
