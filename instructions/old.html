@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Instructions</title>
-    <link rel="icon" href="imgs/icon.jpg">
     <meta name="twitter:title" content="Roblox Exploits | Instructions">
-    <meta name="twitter:description" content="Instructions to use our exploits installing the dependencies and exploit itself.">
+    <meta name="twitter:description" content="Get your latest Roblox Exploiting News & Downloads here! We have the most reputable exploits ever made to download right here. Aswell as decent Exploiting News!">
     <meta name="twitter:image" content="https://dogekingyt1.github.io/rbxploits/imgs/icon.jpg">
+    <title>Roblox Exploits | Instructions</title>
+    <link rel="icon" href="/rbxploits/imgs/icon.jpg">
+    <link rel="stylesheet" href="prism/prism-dark.css">
+    <script src="https://kit.fontawesome.com/3a0d98dcec.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const player = new Plyr('.videoplayer');
+      });
+    </script>
     <style>
         body {
             background-color: #333;
             color: #fff;
             font-size: 20px;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
 
         #header {
@@ -50,39 +58,403 @@
             background: #1c1c1c;
             /* border: none; */
             border-style: outset;
-            border-color: #ffffff;
-            border-radius: 5px;
+            animation: rgb 2s infinite linear;
+            border-color: #C0C0C0;
+            border-radius: 20px;
             cursor: pointer;
             color: #fff;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
+        .status1 {
+          color: #00ff00;
+        }
+        .status2 {
+          color: #ff0000;
+        }
+        .status3 {
+          color: #ffff00;
+        }
+        .risklvl-header {
+          color: #ffffff;
+        }
+        #risk-lvl {
+          background: #1c1c1c;
+          border-radius: 25px;
+          border-style: outset;
+          border-color: #C0C0C0;
+          padding: 25px;
+          margin: 0 auto;
+          width: 30%;
+          height: 40%;
+        }
+        .video {
+          width: 600px;
+          height: 400px;
+        }
+        .alert {
+          background: #7c0000;
+          color: #ffffff;
+          padding: 15px;
+          border-radius: 20px;
+          border-style: outset;
+          margin-bottom: 20px;
+          margin-top: 20px;
+        }
+        .info {
+          background: #111;
+          margin-top: 20px;
+        }
+        .mugshot {
+          display: block;
+          width: 110px;
+          height: 110px;
+          border-radius: 50%;
+          margin: 0 auto;
+          margin-bottom: 10px;
+          object-fit: cover;
+        }
+        .username {
+          text-align: center;
+          text-decoration-color: green;
+        }
+        .exploit-info {
+          background: #161616;
+          color: #ffffff;
+          width: 30%;
+          height: 40%;
+          padding: 15px;
+          border-radius: 20px;
+          border-style: outset;
+          margin: 0 auto;
+          margin-top: 40px;
+        }
+        .exploit-title {
+          color: #212121;
+          size: 15%;
+        }
+        .exploit-icon {
+          display: block;
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          border-style: outset;
+          animation: rgb 2s infinite linear;
+          margin: 0 auto;
+          margin-bottom: 10px;
+          object-fit: cover;
+        }
+
+        @keyframes rgb {
+          0%, 100% {
+            box-shadow: 0 0 10px 3px rgb(255, 0, 0); /* Red */
+          }
+          33.33% {
+            box-shadow: 0 0 10px 3px rgb(0, 0, 255); /* Blue */
+          }
+          66.67% {
+            box-shadow: 0 0 10px 3px rgb(0, 255, 0); /* Green */
+          }
+        }
+
+        .site-logo {
+          width: 150px;
+          height: auto;
+          display: block;
+          margin: 0 auto;
+          border-radius: 10px;
+        }
+        h2 {
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .fa-solid {
+          color: #ffffff;
+          font-size: 20px;
+          margin-right: 5px;
+        }
+        .fa-discord {
+          color: #ffffff;
+          font-size: 20px;
+          margin-right: 5px;
+        }
+        .fa-triangle-exclamation {
+          color: #ffff00;
+          font-size: 20px;
+        }
+        .news {
+          background: #161616;
+          color: #ffffff;
+          width: 60%;
+          height: 40% auto;
+          padding: 15px;
+          border-radius: 20px;
+          border-style: outset;
+          margin: 0 auto;
+          margin-top: 40px;
+        }
+
+        #youtube {
+          border-style: outset;
+          border-color: #ffffff;
+          padding: 12px;
+          border-radius: 12px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+        .about-me {
+          background-color: #111;
+          color: #fff;
+          padding: 20px;
+          text-align: center;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .dev-name {
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+
+        .mugshot2 {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          margin-bottom: 10px;
+          border: 3px solid #fff;
+          animation: rgb 2s infinite linear;
+        }
+
+        .skills {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .skills i {
+          margin: 5px;
+        }
+
+        .skills p {
+          margin: 5px;
+          font-size: 14px;
+        }
+
+        .skills fa-html5 {
+          color: #ff9900;
+        }
+
+        .skills fa-css3-alt {
+          color: #007bff;
+        }
+
+        .skills fa-js {
+          color: #ffff00;
+        }
+
+        .skills fa-php {
+          color: #013670;
+        }
+
+        .skills fa-linux {
+          color: #ffffff;
+        }
+
+        .skills fa-terminal {
+          color: #ffffff;
+        }
+
+        .socials {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .socials i {
+          margin: 5px;
+        }
+
+        .socials p {
+          margin: 5px;
+          font-size: 14px;
+        }
+        .socials fa-discord {
+          color: #0000ffd4;
+        }
+
+        h2 .fa-brands.fa-windows {
+          color: #007bff;
+          margin-right: 10px;
+        }
+        h2 .fa-brands.fa-android {
+          color: #009e22;
+          margin-right: 10px;
+        }
+        
+        .banner {
+          margin-top: 20px;
+          margin-bottom: 20px;
+          width: 200;
+          height: 120;
+        }
+
+        .site-title {
+          text-align: center;
+          display: flex;
+          justify-content: center;
+        }
+        .videoplayer {
+          width: 100%;
+          height: auto; /* Ensures the video retains its aspect ratio */
+          outline: none; /* Remove default focus outline */
+          border: 3px solid #ccc; /* Example border */
+          border-radius: 5px; /* Example border radius */
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Example box shadow */
+        }
     </style>
 </head>
 <body>
+    <script src="prism/prism-dark.js"></script>
     <div id="header">
+        <!--<i class="fa-solid fa-share"></i>-->
+        <!--<img src="imgs/MEGA.jpg" class="banner">-->
         <div id="header-text">
-            <h1>Instructions</h1>
+            <img class="site-logo" src="/rbxploits/imgs/icon.jpg">
+            <h2 class="site-title">Roblox Exploits | Instructions</h2>
+            <p class="site-desc"><b><i>Make Exploiting Great Again | Roblox Exploits ~ 2020</i></b></p>
         </div>
         <div id="header-buttons">
-            <button class="button" onclick="window.location.href='/rbxploits'">Home</button>
-          <button class="button" onclick="window.location.href='/rbxploits/error.html'">Scripts</button>
-          <button class="button" onclick="window.location.href='/rbxploits/error.html'">TP Games</button>
+          <button class="button header-button" onclick="window.location.href='/rbxploits'"><i class="fa-solid fa-house"></i>Home</button>
+          <button class="button header-button" onclick="window.location.href='instructions'"><i class="fa-solid fa-gear"></i>Instructions</button>
+          <button class="button header-button" onclick="window.location.href='scripts'"><i class="fa-solid fa-scroll fa-flip-horizontal"></i>Scripts</button>
+          <button class="button header-button" onclick="window.location.href='games'"><i class="fa-solid fa-gamepad"></i>TP Games</button>
         </div>
+        <!--<div class="info">
+          <img class="mugshot" src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-EC85E9995F7EDF3B7652464ACE0D61E6-Png/150/150/AvatarHeadshot/Png/noFilter">
+          <p class="username">Announcement from: IHateRBLXMod3r4i0n (Doge_KingYT1)</p>
+        </div>
+        <div class="alert">
+          <p><i class="fa-solid fa-triangle-exclamation"></i>Announcement: A new executor by the name of wave has been getting alot of alligations, such as being a 'Honeypot', 'Virus', or being detected. Careful running this exploit. (4/11/24)<i class="fa-solid fa-triangle-exclamation"></i></p>
+        </div>-->
     </div>
-    <div id="content">
+  <div id="content">
 
-    <!--
-      <h1>Netflix Python Edition</h1>
-      <p><b>Step 1: Download the .rar file from the Home Page.</b></p>
-      <p><b>Step 2: Download Python 3 from Microsoft Store or <a href="https://python.org/downloads/">Python Downloads</a>.</b></p>
-      <p><b>Step 3: Run these two commands in Command Prompt.</b></p>
-      <code>
-        <p>pip install pyautogui</p>
-        <p>pip install pymem</p>
-        <p>python3 server.py or Run opener.bat</p>
-        <p>(Run this Command in the same Directory of the file or it wont work)</p>
-      </code>
-      -->
+    <div id="risk-lvl">
+      <h2 class="risklvl-header">Risk Levels:</h2>
+      <p><b class="status2">Ban Risk / Security Risk / Patched</b></p>
+      <p><b class="status3">Work in Progress / Not released yet</b></p>
+      <p><b class="status1">Working as of Latest Update</b></p>
     </div>
+    <iframe src="https://dogekingyt1.github.io/rbxploits/IAT/" style="height:400px; width:350px; margin-top: 20px; border-radius: 25px; border-style: outset; border-color: #C0C0C0;"></iframe>
+    <!--
+    <div class="exploit-info">
+      <img class="exploit-icon" src="imgs/example.png">
+      <p><b>Olympia</b></p>
+      <p><b>Version: Web</b></p>
+      <p><b>Status: <i class="status3">Possibly working</i></b></p>
+      <p><b>Level: 2</b></p>
+      <h3 class="desc-title">Exploit Description:</h3>
+      <p><b class="desc-text">Example Description.</b></p>
+      <button class="button" onclick="window.open('error.html')"><i class="fa-solid fa-download"></i>Download</button>
+      <button class="button" onclick="window.open('error.html')"><i class="fa-brands fa-discord"></i>Discord</button>
+    </div>    
+    -->
+    
+    
+    <h2><i class="fa-brands fa-windows"></i>Externals</h2>
+    <div class="exploit-info">
+        <img class="exploit-icon" src="/rbxploits/imgs/icon.jpg">
+        <p><b>Placeholder</b></p>
+        <p><b>Version: Web & UWP</b></p>
+        <p><b>Status: <i class="status3">Unkown</i></b></p>
+        <p><b>Level: Unknown</b></p>
+        <h3 class="desc-title">Exploit Instructions:</h3>
+        <p><b class="desc-text">Exploit Instructions Here.</b></p>
+        <!--<button class="button" onclick="window.open('/error.html')"><i class="fa-solid fa-download"></i>Download</button>
+        <button class="button" onclick="window.open('/error.html')"><i class="fa-brands fa-discord"></i>Discord</button> -->
+    </div>
+
+    <h2><i class="fa-brands fa-windows"></i>Internals</h2>
+    <div class="exploit-info">
+        <img class="exploit-icon" src="/rbxploits/imgs/icon.jpg">
+        <p><b>Placeholder</b></p>
+        <p><b>Version: Web & UWP</b></p>
+        <p><b>Status: <i class="status3">Unknown</i></b></p>
+        <p><b>Level: Unknown</b></p>
+        <h3 class="desc-title">Exploit Instructions:</h3>
+        <p><b class="desc-text">Exploit Instructions Here.</b></p>
+        <!--<button class="button" onclick="window.open('/error.html')"><i class="fa-solid fa-download"></i>Download</button>
+        <button class="button" onclick="window.open('/error.html')"><i class="fa-brands fa-discord"></i>Discord</button> -->
+    </div>
+
+    <h2><i class="fa-brands fa-windows"></i>Soft-Aims / AI Aimbot</h2>
+    <div class="exploit-info">
+        <img class="exploit-icon" src="/rbxploits/imgs/icon.jpg">
+        <p><b>Placeholder</b></p>
+        <p><b>Version: Web & UWP</b></p>
+        <p><b>Status: <i class="status3">Unknown</i></b></p>
+        <p><b>Level: Unknown</b></p>
+        <h3 class="desc-title">Exploit Instructions:</h3>
+        <p><b class="desc-text">Exploit Instructions Here.</b></p>
+        <!--<button class="button" onclick="window.open('/error.html')"><i class="fa-solid fa-download"></i>Download</button>
+        <button class="button" onclick="window.open('/error.html')"><i class="fa-brands fa-discord"></i>Discord</button> -->
+    </div>
+
+    <h2><i class="fa-brands fa-android"></i>Android</h2>
+    <div class="exploit-info">
+        <img class="exploit-icon" src="/rbxploits/imgs/icon.jpg">
+        <p><b>Placeholder</b></p>
+        <p><b>Version: Android</b></p>
+        <p><b>Status: <i class="status3">Unknown</i></b></p>
+        <p><b>Level: Unknown</b></p>
+        <h3 class="desc-title">Exploit Instructions:</h3>
+        <p><b class="desc-text">Exploit Instructions Here.</b></p>
+        <!--<button class="button" onclick="window.open('/error.html')"><i class="fa-solid fa-download"></i>Download</button>
+        <button class="button" onclick="window.open('/error.html')"><i class="fa-brands fa-discord"></i>Discord</button> -->
+    </div>
+    
+
+    <h2>Server-Sides</h2>
+    <div class="exploit-info">
+        <img class="exploit-icon" src="/rbxploits/imgs/icon.jpg">
+        <p><b>Placeholder</b></p>
+        <p><b>Version: Web & UWP</b></p>
+        <p><b>Status: <i class="status3">Unknown</i></b></p>
+        <p><b>Level: Unknown</b></p>
+        <h3 class="desc-title">Exploit Instructions:</h3>
+        <p><b class="desc-text">Exploit Instructions Here.</b></p>
+        <!--<button class="button" onclick="window.open('/error.html')"><i class="fa-solid fa-download"></i>Download</button>
+        <button class="button" onclick="window.open('/error.html')"><i class="fa-brands fa-discord"></i>Discord</button> -->
+    </div>
+  </div>
+
+  <div class="about-me">
+    <h2 class="dev-name">Doge_KingYT1</h2>
+    <p><b>Roblox Developer / Roblox Exploiter / White-Hat Hacker</b></p>
+    <img class="mugshot2" src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-EC85E9995F7EDF3B7652464ACE0D61E6-Png/150/150/AvatarHeadshot/Png/noFilter">
+    <div class="socials">
+      <i class="fa-brands fa-tiktok"></i>
+      <p>@doge_kingyt</p>
+      <i class="fa-brands fa-discord" style="color: #5865f2"></i>
+      <p>@doge_kingyt1</p>
+    </div>
+    <div class="skills">
+      <i class="fa-brands fa-html5" style="color: #ff9900;"></i>
+      <p>HTML5</p>
+      <i class="fa-brands fa-css3-alt" style="color: #007bff;"></i>
+      <p>CSS</p>
+      <i class="fa-brands fa-js" style="color: #ffff00;"></i>
+      <p>Javascript</p>
+      <i class="fa-brands fa-php" style="color: #013670;"></i>
+      <p>PHP</p>
+      <!--<i class="fa-brands fa-docker"></i>
+      <p>Docker</p>
+      <i class="fa-brands fa-wordpress"></i>
+      <p>Wordpress</p>-->
+      <i class="fa-brands fa-linux"></i>
+      <p>Linux</p>
+      <i class="fa-brands fa-windows" style="color: #007bff;"></i>
+      <p>Windows</p>
+      <i class="fa-brands fa-android" style="color: #009e22;"></i>
+      <p>Android</p>
+    </div>
+  </div>
 </body>
 </html>
