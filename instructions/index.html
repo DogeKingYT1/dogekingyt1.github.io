@@ -22,285 +22,286 @@
       window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
     </script>
     <script defer src="/_vercel/speed-insights/script.js"></script>
+  <style>
     body {
       background-color: #333;
       color: #fff;
       font-size: 20px;
-  }
+    }
 
-  #header {
-      background-color: #111;
-      padding: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-  
-  #header-text {
-      margin-bottom: 10px;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-  
-  #header-buttons {
-      display: flex;
-      justify-content: center;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-  
-  #content {
-      background-color: #222;
-      padding: 40px;
-      text-align: center;
-      font-size: 22px;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-  
-  .button {
-      font-size: 18px;
-      padding: 10px 20px;
-      margin: 5px;
+    #header {
+        background-color: #111;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    #header-text {
+        margin-bottom: 10px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    #header-buttons {
+        display: flex;
+        justify-content: center;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    #content {
+        background-color: #222;
+        padding: 40px;
+        text-align: center;
+        font-size: 22px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .button {
+        font-size: 18px;
+        padding: 10px 20px;
+        margin: 5px;
+        background: #1c1c1c;
+        /* border: none; */
+        border-style: outset;
+        animation: rgb 2s infinite linear;
+        border-color: #C0C0C0;
+        border-radius: 20px;
+        cursor: pointer;
+        color: #fff;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    /* Status Codes*/
+    .status1 {
+      color: #00ff00;
+    }
+    .status2 {
+      color: #ffff00;
+    }
+    .status3 {
+      color: #ff0000;
+    }
+    .status4 {
+      color: #ff6d18;
+    }
+    .risklvl-header {
+      color: #ffffff;
+    }
+    #risk-lvl {
       background: #1c1c1c;
-      /* border: none; */
+      border-radius: 25px;
+      border-style: outset;
+      border-color: #C0C0C0;
+      padding: 25px;
+      margin: 0 auto;
+      width: 30%;
+      height: 40%;
+    }
+    .video {
+      width: 600px;
+      height: 400px;
+    }
+    .alert {
+      background: #7c0000;
+      color: #ffffff;
+      padding: 15px;
+      border-radius: 20px;
+      border-style: outset;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .info {
+      background: #111;
+      margin-top: 20px;
+    }
+    .mugshot {
+      display: block;
+      width: 110px;
+      height: 110px;
+      border-style: outset;
+      border-color: #4c4c4c;
+      border-radius: 50%;
+      margin: 0 auto;
+      margin-bottom: 10px;
+      object-fit: cover;
+    }
+    .username {
+      text-align: center;
+      text-decoration-color: green;
+    }
+    .exploit-info {
+      background: #161616;
+      color: #ffffff;
+      width: 30%;
+      height: 40%;
+      padding: 15px;
+      border-radius: 20px;
+      border-style: outset;
+      margin: 0 auto;
+      margin-top: 40px;
+    }
+    .exploit-title {
+      color: #212121;
+      size: 15%;
+    }
+    .exploit-icon {
+      display: block;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
       border-style: outset;
       animation: rgb 2s infinite linear;
-      border-color: #C0C0C0;
-      border-radius: 20px;
-      cursor: pointer;
-      color: #fff;
+      margin: 0 auto;
+      margin-bottom: 10px;
+      object-fit: cover;
+    }
+
+    @keyframes rgb {
+      0%, 100% {
+        box-shadow: 0 0 10px 3px rgb(255, 0, 0); /* Red */
+      }
+      33.33% {
+        box-shadow: 0 0 10px 3px rgb(0, 0, 255); /* Blue */
+      }
+      66.67% {
+        box-shadow: 0 0 10px 3px rgb(0, 255, 0); /* Green */
+      }
+    }
+
+    .site-logo {
+      width: 150px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 35px;
+    }
+    h2 {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-  /* Status Codes*/
-  .status1 {
-    color: #00ff00;
-  }
-  .status2 {
-    color: #ffff00;
-  }
-  .status3 {
-    color: #ff0000;
-  }
-  .status4 {
-    color: #ff6d18;
-  }
-  .risklvl-header {
-    color: #ffffff;
-  }
-  #risk-lvl {
-    background: #1c1c1c;
-    border-radius: 25px;
-    border-style: outset;
-    border-color: #C0C0C0;
-    padding: 25px;
-    margin: 0 auto;
-    width: 30%;
-    height: 40%;
-  }
-  .video {
-    width: 600px;
-    height: 400px;
-  }
-  .alert {
-    background: #7c0000;
-    color: #ffffff;
-    padding: 15px;
-    border-radius: 20px;
-    border-style: outset;
-    margin-bottom: 20px;
-    margin-top: 20px;
-  }
-  .info {
-    background: #111;
-    margin-top: 20px;
-  }
-  .mugshot {
-    display: block;
-    width: 110px;
-    height: 110px;
-    border-style: outset;
-    border-color: #4c4c4c;
-    border-radius: 50%;
-    margin: 0 auto;
-    margin-bottom: 10px;
-    object-fit: cover;
-  }
-  .username {
-    text-align: center;
-    text-decoration-color: green;
-  }
-  .exploit-info {
-    background: #161616;
-    color: #ffffff;
-    width: 30%;
-    height: 40%;
-    padding: 15px;
-    border-radius: 20px;
-    border-style: outset;
-    margin: 0 auto;
-    margin-top: 40px;
-  }
-  .exploit-title {
-    color: #212121;
-    size: 15%;
-  }
-  .exploit-icon {
-    display: block;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border-style: outset;
-    animation: rgb 2s infinite linear;
-    margin: 0 auto;
-    margin-bottom: 10px;
-    object-fit: cover;
-  }
-
-  @keyframes rgb {
-    0%, 100% {
-      box-shadow: 0 0 10px 3px rgb(255, 0, 0); /* Red */
     }
-    33.33% {
-      box-shadow: 0 0 10px 3px rgb(0, 0, 255); /* Blue */
+    .fa-solid {
+      color: #ffffff;
+      font-size: 20px;
+      margin-right: 5px;
     }
-    66.67% {
-      box-shadow: 0 0 10px 3px rgb(0, 255, 0); /* Green */
+    .fa-discord {
+      color: #ffffff;
+      font-size: 20px;
+      margin-right: 5px;
     }
-  }
+    .fa-triangle-exclamation {
+      color: #ffff00;
+      font-size: 20px;
+    }
+    .news {
+      background: #161616;
+      color: #ffffff;
+      width: 60%;
+      height: 40% auto;
+      padding: 15px;
+      border-radius: 20px;
+      border-style: outset;
+      margin: 0 auto;
+      margin-top: 40px;
+    }
 
-  .site-logo {
-    width: 150px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 35px;
-  }
-  h2 {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-  .fa-solid {
-    color: #ffffff;
-    font-size: 20px;
-    margin-right: 5px;
-  }
-  .fa-discord {
-    color: #ffffff;
-    font-size: 20px;
-    margin-right: 5px;
-  }
-  .fa-triangle-exclamation {
-    color: #ffff00;
-    font-size: 20px;
-  }
-  .news {
-    background: #161616;
-    color: #ffffff;
-    width: 60%;
-    height: 40% auto;
-    padding: 15px;
-    border-radius: 20px;
-    border-style: outset;
-    margin: 0 auto;
-    margin-top: 40px;
-  }
+    #youtube {
+      border-style: outset;
+      border-color: #ffffff;
+      padding: 12px;
+      border-radius: 12px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .about-me {
+      background-color: #111;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
 
-  #youtube {
-    border-style: outset;
-    border-color: #ffffff;
-    padding: 12px;
-    border-radius: 12px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  .about-me {
-    background-color: #111;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
+    .dev-name {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
 
-  .dev-name {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
+    .mugshot2 {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      border: 3px solid #fff;
+      animation: rgb 2s infinite linear;
+    }
 
-  .mugshot2 {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    border: 3px solid #fff;
-    animation: rgb 2s infinite linear;
-  }
+    .skills {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-  .skills {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    .skills i {
+      margin: 5px;
+    }
 
-  .skills i {
-    margin: 5px;
-  }
+    .skills p {
+      margin: 5px;
+      font-size: 14px;
+    }
 
-  .skills p {
-    margin: 5px;
-    font-size: 14px;
-  }
+    .socials {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-  .socials {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    .socials i {
+      margin: 5px;
+    }
 
-  .socials i {
-    margin: 5px;
-  }
+    .socials p {
+      margin: 5px;
+      font-size: 14px;
+    }
+    .socials fa-discord {
+      color: #0000ffd4;
+    }
 
-  .socials p {
-    margin: 5px;
-    font-size: 14px;
-  }
-  .socials fa-discord {
-    color: #0000ffd4;
-  }
+    h2 .fa-brands.fa-windows {
+      color: #007bff;
+      margin-right: 10px;
+    }
+    h2 .fa-brands.fa-android {
+      color: #009e22;
+      margin-right: 10px;
+    }
+    h2 .fa-scolid.fa-terminal {
+      color: #dadadad4;
+      margin-right: 15px;
+    }
+    .banner {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      width: 200;
+      height: 120;
+    }
 
-  h2 .fa-brands.fa-windows {
-    color: #007bff;
-    margin-right: 10px;
-  }
-  h2 .fa-brands.fa-android {
-    color: #009e22;
-    margin-right: 10px;
-  }
-  h2 .fa-scolid.fa-terminal {
-    color: #dadadad4;
-    margin-right: 15px;
-  }
-  .banner {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 200;
-    height: 120;
-  }
-
-  .site-title {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-  }
-  .videoplayer {
-    width: 100%;
-    height: auto; /* Ensures the video retains its aspect ratio */
-    outline: none; /* Remove default focus outline */
-    border: 3px outset #ccc; /* Example border */
-    border-radius: 5px; /* Example border radius */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Example box shadow */
-  }
-  
-</style>
+    .site-title {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+    }
+    .videoplayer {
+      width: 100%;
+      height: auto; /* Ensures the video retains its aspect ratio */
+      outline: none; /* Remove default focus outline */
+      border: 3px outset #ccc; /* Example border */
+      border-radius: 5px; /* Example border radius */
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Example box shadow */
+    }
+    
+  </style>
 </head>
 <body>
   <script>
