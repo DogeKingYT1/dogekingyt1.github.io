@@ -141,6 +141,7 @@
           margin: 0 auto;
           margin-top: 40px;
         }
+
         .exploit-title {
           color: #212121;
           size: 15%;
@@ -243,11 +244,12 @@
 
         .skills i {
           margin: 5px;
+          font-size: 19px;
         }
 
         .skills p {
           margin: 5px;
-          font-size: 14px;
+          font-size: 15px;
         }
 
         .socials {
@@ -301,6 +303,97 @@
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Example box shadow */
         }
         
+        .features {
+          font-size: 17px;
+        }
+        /* Sidebar style */
+        #sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: -250px; /* Hidden by default */
+            background-color: #111;
+            color: white;
+            transition: left 0.3s ease;
+            padding-top: 20px; /* Adjust the padding to move buttons towards the top */
+        }
+
+        /* Button styles */
+        .sidebar-button {
+            display: block;  /* Makes each button occupy a full line */
+            padding: 12px 20px;  /* Adjust padding for button size, reduce from 15px */
+            background-color: #111;
+            color: white;
+            font-size: 18px;
+            border: none;
+            text-align: center;  /* Align text inside the button */
+            width: 100%;       /* Make buttons take full width */
+            cursor: pointer;
+            border-bottom: 1px solid #444;  /* Optional: Add a border between buttons */
+            transition: background-color 0.3s ease;
+            margin-top: 2px; /* Reduce margin between buttons for closer placement */
+        }
+
+        .sidebar-button:hover {
+            background-color: #444;
+        }
+
+        .sidebar-button:focus {
+            outline: none;
+        }
+
+        #sidebar a {
+            padding: 8px 10px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        #sidebar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .close-button {
+          background-color: #ff0000; /* Dark background */
+          color: white; /* White text */
+          border: 3px solid #ffffff; /* White border around the button */
+          /* border-radius: 50%; /* Circular button */
+          border-radius: 20%;
+          font-size: 20px; /* Larger font for the icon */
+          width: 40px; /* Set a fixed width for the circular button */
+          height: 40px; /* Set a fixed height for the circular button */
+          display: flex; /* Use flexbox to center the icon */
+          justify-content: center; /* Center the icon horizontally */
+          align-items: center; /* Center the icon vertically */
+          cursor: pointer; /* Change cursor on hover */
+          transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover transition */
+          position: absolute; /* Position it inside the sidebar */
+          top: 5px; /* 10px from the top of the sidebar */
+          right: 9px; /* 10px from the right of the sidebar */
+          z-index: 9999; /* Ensure the button is on top */
+          
+      }
+
+      .close-button:hover {
+          background-color: #444444; /* Slightly lighter background on hover */
+          transform: scale(1.1); /* Slightly scale up the button */
+      }
+
+      .close-button:focus {
+          outline: none; /* Remove focus outline */
+      }
+
+      .close-button i {
+          font-size: 1.5em; /* Adjust the icon size */
+      }
+      .buttons {
+        margin-top: 30px; /* Adjust this value to move the div down */
+        padding-left: 10px; /* Optional: Adds a little padding on the left */
+      }
     </style>
 </head>
 <body>
@@ -348,7 +441,23 @@
           const players = Plyr.setup('.videoplayer');
       });
     </script>
-
+    <script>
+      function openSidebar() {
+          var sidebar = document.getElementById("sidebar");
+          // If the sidebar is hidden, slide it in
+          if (sidebar.style.left === "-250px") {
+              sidebar.style.left = "0";
+          } else {
+              // Otherwise, slide it back out
+              sidebar.style.left = "-250px";
+          }
+      }
+      function closeSidebar() {
+        var sidebar = document.getElementById("sidebar");
+        sidebar.style.left = "-250px";
+      }
+    </script>
+    
     <script>
       window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
@@ -357,73 +466,149 @@
     <script src="prism/prism-dark.js"></script>
     <div id="header">
         <!--<i class="fa-solid fa-share"></i>-->
-        <!--<img src="imgs/MEGA.jpg" class="banner">-->
         <div id="header-text">
+            <!--<button class="button" onclick="window.location.href='#'" style="position: absolute; top: 15px; right: 140px; font-size: 18px;"><i class="fa-regular fa-user"></i> Login</button>
+            <button class="button" onclick="window.location.href='#'" style="position: absolute; top: 15px; right: 10px; font-size: 18px;"><i class="fa-regular fa-clipboard"></i> Sign up</button>-->
             <img class="site-logo" src="imgs/icon.jpg">
             <h2 class="site-title">Roblox Exploits</h2>
-            <p class="site-desc"><b><i>Make Exploiting Great Again | Roblox Exploits ~ 2020</i></b></p>
-            <p style="position: absolute; top: 0; left: 20px;">Last Update: 11/6/24</p>
-            <button onclick="copyLink()" style="position: absolute; top: 55px; left: 20px; font-size: 18px; padding: 10px 10px; background: #1c1c1c; border-style: outset; animation: rgb 2s infinite linear; border-color: #C0C0C0; border-radius: 20px; cursor: pointer; color: #fff;"><i class="fa-solid fa-share"></i>Share</button>
+            <!--<p class="site-desc"><b><i></i></b></p>-->
+            <!--<p style="position: absolute; top: 0; left: 20px;">Last Update: 11/6/24</p>
+            <button onclick="copyLink()" style="position: absolute; top: 55px; left: 20px; font-size: 18px; padding: 10px 10px; background: #1c1c1c; border-style: outset; animation: rgb 2s infinite linear; border-color: #C0C0C0; border-radius: 20px; cursor: pointer; color: #fff;"><i class="fa-solid fa-share"></i>Share</button>-->
+            <button class="button" onclick="openSidebar()" style="position: absolute; top: 15px; left: 20px;"><i class="fa-solid fa-bars"></i></button>
+            <p style="position: absolute; top: 5px; right: 25px; font-size: 18px; font-style: bold;"><b>Last Update:</b> 1/28/25</p>
+        </div>
+        <div id="sidebar">
+          <button class="close-button" onclick="closeSidebar()">-</button>
+          
+          <div class="buttons">
+            <!--<button class="sidebar-button" onclick="window.location.href='#'">Home</button>
+            <button class="sidebar-button" onclick="window.location.href='#'">Install</button>
+            <button class="sidebar-button" onclick="window.location.href='#'">Scripts</button>
+            <button class="sidebar-button" onclick="window.location.href='#'">News</button>
+            <button class="sidebar-button" onclick="window.location.href='#'">Misc.</button>
+            -->
+            <a href="#">Home</a>
+            <a href="#">Install</a>
+            <a href="#">Scripts</a>
+            <a href="#">News</a>
+            <a href="#">Misc.</a>
             
         </div>
-        <div id="header-buttons">
-          <button class="button header-button"><i class="fa-solid fa-house"></i>Home</button>
-          <button class="button header-button" onclick="window.location.href='instructions'"><i class="fa-solid fa-gear"></i>Instructions</button>
-          <button class="button header-button" onclick="window.location.href='scripts'"><i class="fa-solid fa-scroll fa-flip-horizontal"></i>Scripts</button>
-          
-        </div>
-        <!--
+      </div>
+        <!-- Announcement Header-->
         <div class="info">
-          <img class="mugshot" src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-EC85E9995F7EDF3B7652464ACE0D61E6-Png/150/150/AvatarHeadshot/Png/noFilter">
+          <img class="mugshot" src="">
           <p class="username">Announcement from: IHateRBLXMod3r4i0n (Doge_KingYT1)</p>
         </div>
         <div class="alert">
-          <p><i class="fa-solid fa-triangle-exclamation"></i>Announcement: Placeholder <i class="fa-solid fa-triangle-exclamation"></i></p>
-        </div>-->
+          <p><i class="fa-solid fa-triangle-exclamation"></i>Announcement: BETA website design has just been rolled out, DM me what you think! <i class="fa-solid fa-triangle-exclamation"></i></p>
+        </div>
     </div>
   <div id="content">
 
-    <div id="risk-lvl">
+    <div id="risk-lvl" style="height:400px; width:350px; margin-top: 450px; border-radius: 25px; border-style: outset; border-color: #C0C0C0; position: absolute; right: 100px;">
       <h2 class="risklvl-header">Risk Levels:</h2>
       <p><b class="status4">Security Risk / Virus</b></p>
       <p><b class="status3">Detected / Patched</b></p>
       <p><b class="status2">Unreleased / W.I.P</b></p>
       <p><b class="status1">Working as of Latest ROBLOX Update</b></p>
     </div>
-    <!--<iframe src="IAT/" style="height:400px; width:350px; margin-top: 20px; border-radius: 25px; border-style: outset; border-color: #C0C0C0;"></iframe> -->
+    <iframe src="IAT/" style="height:400px; width:350px; margin-top: 20px; border-radius: 25px; border-style: outset; border-color: #C0C0C0; position: absolute; right: 100px;"></iframe>
     
-    <!--
-    <div class="exploit-info">
-      <img class="exploit-icon" src="imgs/example.png">
-      <p><b>Exploit Name</b></p>
-      <p><b>Version: Unknown</b></p>
-      <p><b>Status: <i class="status3">Unreleased</i></b></p>
-      <p><b>Level: Unknown</b></p>
+    <!-- Template
+    <div class="exploit-info" id="example">
+      <i class="fa-brands fa-android" style="font-size: 45px; position: absolute; right: 680px; color: #009e22;"></i>
+      <i class="fa-solid fa-certificate" style="font-size: 20px; color:#006ee3"></i>
+      <i class="fa-solid fa-check" style="font-size: 15px; color:#fafbfc;"></i>
+      <img class="exploit-icon" src="/imgs/icon.jpg">
+      <p><b>Example</b></p>
+      <p><b>Version: Android</b></p>
+      <p><b>Status: <i class="status1">Working</i></b></p>
+      <p><b>Level: nil</b></p>
+      <h3 class="desc-title">Features:</h3>
+      <code class="features">
+        <p>- <i class="status1">Placeholder</i></p>
+      </code>
       <h3 class="desc-title">Exploit Description:</h3>
-      <p><b class="desc-text">Example Description.</b></p>
-      <button class="button" onclick="window.open('error.html')"><i class="fa-solid fa-download"></i>Download</button>
-      <button class="button" onclick="window.open('error.html')"><i class="fa-solid fa-cart-shopping"></i>Buy</button>
-      <button class="button" onclick="window.open('error.html')"><i class="fa-brands fa-discord"></i>Discord</button>
+      <p><b class="desc-text">Test</b></p>
+      <button class="button" onclick="window.open('')"><i class="fa-solid fa-download"></i>Download</button>
+      <button class="button" onclick="window.open('https://discord.com/invite/serverside')"><i class="fa-brands fa-discord"></i>Discord</button>
     </div>
     -->
     
-    <h2><i class="fa-solid fa-newspaper" style="font-size: 30px; margin-right: 15px;"></i>Media / News</h2>
+    <!--<h2><i class="fa-solid fa-newspaper" style="font-size: 30px; margin-right: 15px;"></i>Media / News</h2>
     <p>Latest Roblox Exploiting News</p>
     <div class="news" id="news">
-      
-      <p>No new news to report.</p>
+      <iframe src="/IAT/" style="size: 100px;"></iframe>
       <!--<p>No news to report.</p>
       <iframe id="youtube" width="390" height="400" src="https://www.youtube.com/embed/UOJwVXfISiw" title="Roblox Tool Less Exploit Byfron Bypass &quot;VULKAN&quot; - Working UWP &amp; WEB Version February 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       <iframe width="700" height="500" src="https://www.youtube.com/embed/4GDVJw8wSfw" title="The NEW Roblox Exploit For Windows IS OUT! | No Emulator Ro-Exec | Krampus Roblox Exploit Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       <p><b>Example</b><p>
-      -->
-    </div>
+      
+    </div>-->
 
-    <h2><i class="fa-brands fa-windows" id="externals"></i>Externals</h2>
     <!-- <p><b>Sorry, No externals.</b></p> -->
-    
+    <div class="exploit-info" id="xeno">
+      <i class="fa-brands fa-windows" style="font-size: 45px; position: absolute; right: 680px; color: #007bff;"></i>
+      <i class="fa-solid fa-certificate" style="font-size: 20px; color:#006ee3"></i>
+      <i class="fa-solid fa-check" style="font-size: 15px; color:#fafbfc;"></i>
+      <img class="exploit-icon" src="/imgs/xeno.png">
+      <p><b>Xeno</b></p>
+      <p><b>Version: Any</b></p>
+      <p><b>Status: <i class="status1">Working</i></b></p>
+      <p><b>Level: 3</b></p>
+      <h3 class="desc-title">Features:</h3>
+      <code class="features">
+        <p>- <i class="status1">Free</i></p>
+        <p>- <i class="status1">Decent Quality</i></p>
+      </code>
+      <h3 class="desc-title">Exploit Description:</h3>
+      <p><b class="desc-text">Xeno is a executor made by Rizve, Don't know how safe it is to use but they have both <a style="color:#ffffff;" href="https://tria.ge/241104-1csgrazpgk/behavioral2">Triage</a> and <a style="color:#ffffff;" href="https://www.virustotal.com/gui/file-analysis/NzcwZWFkZGM5ZGJhNzQ3OWZiM2UxM2VjMzcxZDJlNDE6MTczMDc1NTc2OQ==">VirusTotal</a> links to try and verify it's safe. As far as can you get banned for it, more and likely.</b></p>
+      <button class="button" onclick="window.open('')"><i class="fa-solid fa-download"></i>Download</button>
+      <button class="button" onclick="window.open('https://discord.com/invite/serverside')"><i class="fa-brands fa-discord"></i>Discord</button>
+    </div>
     <div class="exploit-info" id="wave">
-      <img class="exploit-icon" src="https://cdn.discordapp.com/icons/1289659915790450849/787283fb3fa6b1a3d15632e6f04af899.webp?size=1024&format=webp&width=473&height=473">
+      <i class="fa-brands fa-windows" style="font-size: 45px; position: absolute; right: 680px; color: #007bff;"></i>
+      <i class="fa-solid fa-certificate" style="font-size: 20px; color:#006ee3"></i>
+      <i class="fa-solid fa-check" style="font-size: 15px; color:#fafbfc;"></i>
+      <img class="exploit-icon" src="/imgs/wave.gif">
+      <p><b>Wave</b></p>
+      <p><b>Version: Any</b></p>
+      <p><b>Status: <i class="status1">Working</i></b></p>
+      <p><b>Level: 8</b></p>
+      <h3 class="desc-title">Features:</h3>
+      <code class="features">
+        <p>- <i class="status1">Free Tier & Paid Tier</i></p>
+        <p>- <i class="status1">Decent Quality</i></p>
+        <p>- </p>
+      </code>
+      <h3 class="desc-title">Exploit Description:</h3>
+      <p><b class="desc-text">Text</b></p>
+      <button class="button" onclick="window.open('#')"><i class="fa-solid fa-download"></i>Download</button>
+      <button class="button" onclick="window.open('#')"><i class="fa-brands fa-discord"></i>Discord</button>
+    </div>
+    <div class="exploit-info" id="xeno">
+      <i class="fa-brands fa-windows" style="font-size: 45px; position: absolute; right: 680px; color: #007bff;"></i>
+      <i class="fa-solid fa-certificate" style="font-size: 20px; color:#006ee3"></i>
+      <i class="fa-solid fa-check" style="font-size: 15px; color:#fafbfc;"></i>
+      <img class="exploit-icon" src="/imgs/solara.png">
+      <p><b>Solara</b></p>
+      <p><b>Version: Any</b></p>
+      <p><b>Status: <i class="status1">Working</i></b></p>
+      <p><b>Level: 3</b></p>
+      <h3 class="desc-title">Features:</h3>
+      <code class="features">
+        <p>- <i class="status1">Free</i></p>
+        <p>- <i class="status1">Decent Quality</i></p>
+        <p>- </p>
+      </code>
+      <h3 class="desc-title">Exploit Description:</h3>
+      <p><b class="desc-text">Xeno is a executor made by Rizve, Don't know how safe it is to use but they have both <a style="color:#ffffff;" href="https://tria.ge/241104-1csgrazpgk/behavioral2">Triage</a> and <a style="color:#ffffff;" href="https://www.virustotal.com/gui/file-analysis/NzcwZWFkZGM5ZGJhNzQ3OWZiM2UxM2VjMzcxZDJlNDE6MTczMDc1NTc2OQ==">VirusTotal</a> links to try and verify it's safe. As far as can you get banned for it, more and likely.</b></p>
+      <button class="button" onclick="window.open('https://getsolara.dev/')"><i class="fa-solid fa-download"></i>Download</button>
+      <button class="button" onclick="window.open('https://discord.com/invite/serverside')"><i class="fa-brands fa-discord"></i>Discord</button>
+    </div>
+    <!--<div class="exploit-info" id="xeno">
+      <img class="exploit-icon" src="/imgs/xeno.png">
       <p><b>Xeno</b></p>
       <p><b>Version: Web</b></p>
       <p><b>Status: <i class="status1">Working</i> & <i class="status2">Risky</i></b></p>
@@ -439,7 +624,7 @@
       <p><b>Wave</b></p>
       <p><b>Version: Web</b></p>
       <p><b>Status: <i class="status1">Working</i> & <i class="status3">Risky</i></b></p>
-      <p><b>Level: 5</b></p>
+      <p><b>Level: 8</b></p>
       <h3 class="desc-title">Exploit Description:</h3>
       <p><b class="desc-text">Wave is a 2024 exploit made by Rexi which is like Synapse X but better. Recently updated and the detection is unknown but It's better than using Solara so yea.</b></p>
       <button class="button" onclick="window.open('https://getwave.gg/')"><i class="fa-solid fa-download"></i>Download</button>
@@ -453,34 +638,70 @@
       <p><b>Status: <i class="status1">Working</i></b></p>
       <p><b>Level: 3</b></p>
       <h3 class="desc-title">Exploit Description:</h3>
-      <p><b class="desc-text"><!--Solara is owned by quiving, very detectable or detected exploit; Wouldn't recommend using w/o a VPN & HWID spoofer. --> Seen a video on YouTube that claims to have lost $7000 and more from qui's executor. Be careful running this.</b></p>
+      <p><b class="desc-text">Solara is owned by quiving, very detectable or detected exploit; Wouldn't recommend using w/o a VPN & HWID spoofer.</b></p>
       <button class="button" onclick="window.open('error.html')"><i class="fa-solid fa-download"></i>Download</button>
       <button class="button" onclick="window.open('https://discord.gg/9scrqjJ2Ra')"><i class="fa-brands fa-discord"></i>Discord</button>
     </div>
-
-    <!--
-    <h2><i class="fa-brands fa-windows" id="internals"></i>Internals</h2>
-    
-    <p><b>Sorry, No internal executors for now.</b></p>
     -->
 
     <h2><i class="fa-brands fa-android" id="android"></i>Android</h2>
+    <div class="exploit-info" id="example">
+      <i class="fa-brands fa-android" style="font-size: 45px; position: absolute; right: 680px; color: #009e22;"></i>
+      <i class="fa-solid fa-certificate" style="font-size: 20px; color:#006ee3"></i>
+      <i class="fa-solid fa-check" style="font-size: 15px; color:#fafbfc;"></i>
+      <img class="exploit-icon" src="/imgs/icon.jpg">
+      <p><b>Example</b></p>
+      <p><b>Version: Android</b></p>
+      <p><b>Status: <i class="status1">Working</i></b></p>
+      <p><b>Level: nil</b></p>
+      <h3 class="desc-title">Features:</h3>
+      <code class="features">
+        <p>- <i class="status1">Placeholder</i></p>
+      </code>
+      <h3 class="desc-title">Exploit Description:</h3>
+      <p><b class="desc-text">Test</b></p>
+      <button class="button" onclick="window.open('')"><i class="fa-solid fa-download"></i>Download</button>
+      <button class="button" onclick="window.open('https://discord.com/invite/serverside')"><i class="fa-brands fa-discord"></i>Discord</button>
+    </div>
 
-    <p><b>Sorry, No Android Executors to suggest.</b></p>
-
-    <h2 id="serversides"><i class="fa-solid fa-terminal"></i>Server-Sides</h2>
-    <p><b>No serversides yet, Sorry.</b></p>
+    <h2 id="serversides">Server-Sides</h2>
+    <div class="exploit-info" id="ss-fun">
+      <i class="fa-solid fa-terminal" style="font-size: 45px; position: absolute; right: 680px; color: #f5f6f6;"></i>
+      
+      <i class="fa-solid fa-certificate" style="font-size: 20px; color:#006ee3"></i>
+      <i class="fa-solid fa-check" style="font-size: 15px; color:#fafbfc;"></i>
+      <img class="exploit-icon" src="https://serverside.fun/assets/logo-245d6415.svg">
+      <p><b>serverside.fun</b></p>
+      <p><b>Version: Any</b></p>
+      <p><b>Status: <i class="status1">Working</i></b></p>
+      <p><b>Level: inf</b></p>
+      <h3 class="desc-title">Features:</h3>
+      <code class="features">
+        <p>- $10-50 depending on your payment plan</p>
+        <p>- <i class="status1">Free</i> Tier with a few cons</p>
+        <p>- Good scripts</p>
+      </code>
+      <h3 class="desc-title">Exploit Description:</h3>
+      <p><b class="desc-text">It's not free, but you can use really powerful scripts, no download required in some popular games with hundreds or thousands of players. Completely semi-bypassing Hyperion. (Roblox I think detects serversides in games so games might get deleted.)</b></p>
+      <button class="button" onclick="window.open('https://serverside.fun/pricing')"><i class="fa-solid fa-tag"></i>Pricing</button>
+      <button class="button" onclick="window.open('https://serverside.fun/')"><i class="fa-solid fa-earth-asia"></i>Website</button>
+      <button class="button" onclick="window.open('https://discord.com/invite/serverside')"><i class="fa-brands fa-discord"></i>Discord</button>
+    </div>
   </div>
   
   <div class="about-me">
     <h2 class="dev-name">Doge_KingYT1</h2>
-    <p><b>Roblox Developer / Roblox Exploiter / White-Hat Hacker</b></p>
-    <img class="mugshot2" src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-EC85E9995F7EDF3B7652464ACE0D61E6-Png/150/150/AvatarHeadshot/Png/noFilter">
+    <p><b>Owner</b></p>
+    <img class="mugshot2" src="https://cdn.discordapp.com/avatars/712925941138980934/1147b0082d659068eb363d2ba3136ea7.webp?size=1024&format=webp">
     <div class="socials">
-      <i class="fa-brands fa-tiktok"></i>
+      <i class="fa-brands fa-youtube" style="color: #dc0000; font-size: 25px; cursor: pointer;"></i>
       <p>@doge_kingyt</p>
-      <i class="fa-brands fa-discord" style="color: #5865f2"></i>
+      <i class="fa-brands fa-tiktok" onclick="window.open('https://www.tiktok.com/@doge_kingyt')" style="cursor: pointer;"></i>
+      <p>@doge_kingyt</p>
+      <i class="fa-brands fa-discord" onclick="window.open('https://dsc.gg/rbxploits')" style="color: #5865f2; cursor: pointer;"></i>
       <p>@doge_kingyt1</p>
+      <i class="fa-brands fa-twitch" onclick="window.open('https://twitch.tv/dogekingyt1')" style="color: #9900ffd4; font-size: 20px; cursor: pointer;"></i>
+      <p>@dogekingyt1</p>
     </div>
     <div class="skills">
       <i class="fa-brands fa-html5" style="color: #ff9900;"></i>
@@ -491,11 +712,8 @@
       <p>Javascript</p>
       <i class="fa-brands fa-php" style="color: #013670;"></i>
       <p>PHP</p>
-      <!--<i class="fa-brands fa-docker"></i>
-      <p>Docker</p>
-      <i class="fa-brands fa-wordpress"></i>
-      <p>Wordpress</p>-->
-      <i class="fa-brands fa-linux"></i>
+      <p>|</p>
+      <i class="fa-brands fa-linux" style="color:#161616; background-color: rgb(66, 65, 65);"></i>
       <p>Linux</p>
       <i class="fa-brands fa-windows" style="color: #007bff;"></i>
       <p>Windows</p>
